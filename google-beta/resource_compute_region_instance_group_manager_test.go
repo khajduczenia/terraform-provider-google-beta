@@ -1131,6 +1131,7 @@ resource "google_compute_region_instance_group_manager" "igm-rolling-update-poli
   update_policy {
     type                  = "PROACTIVE"
     minimal_action        = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed       = 2
     max_unavailable_fixed = 2
     min_ready_sec         = 20
@@ -1191,6 +1192,7 @@ resource "google_compute_region_instance_group_manager" "igm-rolling-update-poli
     type                         = "PROACTIVE"
     instance_redistribution_type = "PROACTIVE"
     minimal_action               = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed              = 2
     max_unavailable_fixed        = 2
     min_ready_sec                = 20
@@ -1246,6 +1248,7 @@ resource "google_compute_region_instance_group_manager" "igm-rolling-update-poli
     type                         = "PROACTIVE"
     instance_redistribution_type = "NONE"
     minimal_action               = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed              = 2
     max_unavailable_fixed        = 0
     min_ready_sec                = 10
@@ -1300,6 +1303,7 @@ resource "google_compute_region_instance_group_manager" "igm-rolling-update-poli
     type                         = "PROACTIVE"
     instance_redistribution_type = "NONE"
     minimal_action               = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed              = 0
     max_unavailable_fixed        = 2
     min_ready_sec                = 10
@@ -1357,6 +1361,7 @@ resource "google_compute_region_instance_group_manager" "igm-basic" {
     instance_redistribution_type = "NONE"
     type                         = "OPPORTUNISTIC"
     minimal_action               = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed              = 0
     max_unavailable_fixed        = 6
     min_ready_sec                = 20
@@ -1414,6 +1419,7 @@ resource "google_compute_region_instance_group_manager" "igm-basic" {
     instance_redistribution_type = "NONE"
     type                         = "OPPORTUNISTIC"
     minimal_action               = "REPLACE"
+    most_disruptive_allowed_action = "REPLACE"
     max_surge_fixed              = 0
     max_unavailable_fixed        = 6
     min_ready_sec                = 20
